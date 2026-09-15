@@ -184,8 +184,8 @@ project's own documentation/assumptions.md file.
 | 3 | CG height (h_cg)        | 0.30 m              | Engineering judgment | Medium     | Low, seated-driver layout |
 | 4 | Wheelbase (L)           | 1.55 m              | Engineering judgment | Medium     | Typical FSAE range 1.5-1.6 m |
 | 5 | Track width (t_f, t_r)  | 1.20 m / 1.15 m     | Engineering judgment | Medium     | To be refined once Case Study 2 suspension geometry exists |
-| 6 | Tire size (D, w, r)     | 0.457/0.152/0.229 m | Known product family | High       | Based on common 18x6.0-10 FSAE tire spec |
+| 6 | Tire size (D, w, r)     | 0.457/0.152/0.229 m | Known product        | High       | Based on common 18x6.0-10 FSAE tire spec |
 | 7 | Static tire load (Fz)   | 677 N / 795 N       | Derived (calculated) | High       | Direct calculation from #1-2, not an assumption |
 | 8 | Friction coefficient (μ)| 1.4                 | Engineering judgment | Medium     | Typical racing-slick range; compound-specific data would refine this |
 | 9 | Operating envelope      | 0-25 m/s, ±13.7 m/s²| Derived + judgment   | Medium     | Derived from μ; track/speed assumptions from typical autocross layout |
-|10 | Units/conventions       | SI, SAE-style       | Engineering standard | High       | Industry-standard convention, not a physical assumption |
+|10 | Units/conventions       | SI, SAE-style       | Engineering standard | High       | Industry-standard convention |
