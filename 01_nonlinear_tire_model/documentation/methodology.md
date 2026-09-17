@@ -29,3 +29,21 @@ distribution only determines the front/rear split of that total force.
   race tires in practice. It assumes the entire theoretical friction
   circle is usable simultaneously with no losses, which real
   contact patch behaviour never achieves.
+
+
+## Linear Tire Model
+
+**Purpose:** Introduce slip-ratio dependency, replacing constant friction's
+instant, slip-independent force assumption.
+
+**Method:** Cx derived per axle as Fx_max(constant friction) / kappa_sat,
+with kappa_sat = 0.10.
+
+**Result:** Cx_front = 9476 N, Cx_rear = 11125 N.
+
+**Key finding:** Force now builds progressively with slip rather than
+being instantly available. Because the rear axle has a higher constant
+friction max force and a higher derived slip stiffness, means the
+rear tire is modelled to reach its grip limit faster at lower
+slip in absolute force terms, though both axles saturate at the same
+kappa_sat by construction.
