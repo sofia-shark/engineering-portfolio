@@ -51,14 +51,10 @@ Fx_rear_linear  = Cx_rear  .* kappa_lin;
 %% Plot: Nonlinear vs Linear vs Constant Friction
 figure;
 hold on;
-plot(kappa, Fx_front_pacejka, 'b-', 'LineWidth', 1.5, ...
-    'DisplayName', 'Front - Nonlinear');
-plot(kappa, Fx_rear_pacejka, 'r-', 'LineWidth', 1.5, ...
-    'DisplayName', 'Rear - Nonlinear');
-plot(kappa_lin, Fx_front_linear, 'b:', 'LineWidth', 1.2, ...
-    'DisplayName', 'Front - Linear');
-plot(kappa_lin, Fx_rear_linear, 'r:', 'LineWidth', 1.2, ...
-    'DisplayName', 'Rear - Linear');
+plot(kappa, Fx_front_pacejka, 'b-', 'LineWidth', 1.5, 'DisplayName', 'Front - Nonlinear');
+plot(kappa, Fx_rear_pacejka, 'r-', 'LineWidth', 1.5, 'DisplayName', 'Rear - Nonlinear');
+plot(kappa_lin, Fx_front_linear, 'b:', 'LineWidth', 1.2, 'DisplayName', 'Front - Linear');
+plot(kappa_lin, Fx_rear_linear, 'r:', 'LineWidth', 1.2, 'DisplayName', 'Rear - Linear');
 yline(Fx_front_max, 'b--', 'DisplayName', 'Front - Constant Friction (max)');
 yline(Fx_rear_max, 'r--', 'DisplayName', 'Rear - Constant Friction (max)');
 
