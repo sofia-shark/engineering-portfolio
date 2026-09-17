@@ -62,6 +62,12 @@ book by Hans B. Pacejka.
 **Result:** B_front = B_rear = 6.0606. D_front = 947.6 N, D_rear = 1112.5 N. 
 Peak force occurs at kappa ~0.231 for both axles.
 
+**Peak location:** At the Pacejka curve's peak,
+C*atan(B*kappa_M) = pi/2 exactly, so sin = 1 and peak force always equals D 
+regardless of B or C. Peak slip ratio is kappa_M = tan(pi/(2C)) / B. 
+For this model, kappa_M = 0.2317 for both axles, with peak force = D_front = 947.6 N 
+and D_rear = 1112.5 N respectively.
+
 **Key finding:** Because B was derived as Cx/(C*D), and Cx itself was
 defined as Fx_max/kappa_sat in linear tire model, the Fx_max terms cancel
 algebraically, so B depends only on C and kappa_sat.
