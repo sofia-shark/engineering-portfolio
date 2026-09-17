@@ -36,10 +36,8 @@ Fx_rear_linear  = Cx_rear  .* kappa;   % [N]
 %% Plot: Linear model vs constant-friction reference
 figure;
 hold on;
-plot(kappa, Fx_front_linear, 'b-', 'LineWidth', 1.5, ...
-    'DisplayName', 'Front - Linear Model');
-plot(kappa, Fx_rear_linear, 'r-', 'LineWidth', 1.5, ...
-    'DisplayName', 'Rear - Linear Model');
+plot(kappa, Fx_front_linear, 'b-', 'LineWidth', 1.5, 'DisplayName', 'Front - Linear Model');
+plot(kappa, Fx_rear_linear, 'r-', 'LineWidth', 1.5, 'DisplayName', 'Rear - Linear Model');
 yline(Fx_front_max, 'b--', 'DisplayName', 'Front - Constant Friction (max)');
 yline(Fx_rear_max, 'r--', 'DisplayName', 'Rear - Constant Friction (max)');
 
