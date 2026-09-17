@@ -47,3 +47,23 @@ friction max force and a higher derived slip stiffness, means the
 rear tire is modelled to reach its grip limit faster at lower
 slip in absolute force terms, though both axles saturate at the same
 kappa_sat by construction.
+
+
+## Nonlinear Tire Model: Pacejka Magic Formula
+
+**Purpose:** Replace linear tire model's artificial linear cutoff with a smooth
+curve exhibiting rise-peak falloff behaviour.
+
+**Method:** Simplified Magic Formula, where E = 0, D taken directly from
+constant friction and B derived to match linear tire model's initial slope, 
+given shape factor of C = 1.65. The value is taken from the "Tire and Vehicle Dynamics"
+book by Hans B. Pacejka.
+
+**Result:** B_front = B_rear = 6.0606. D_front = 947.6 N, D_rear = 1112.5 N. 
+Peak force occurs at kappa ~0.231 for both axles.
+
+**Key finding:** Because B was derived as Cx/(C*D), and Cx itself was
+defined as Fx_max/kappa_sat in linear tire model, the Fx_max terms cancel
+algebraically, so B depends only on C and kappa_sat.
+It means front and rear end up with identical B despite different
+loads.
