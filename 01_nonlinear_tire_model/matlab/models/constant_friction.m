@@ -31,5 +31,4 @@ Fx_total_max = 2*Fx_front_max + 2*Fx_rear_max;
 a_max   = Fx_total_max / m;   % [m/s^2]
 a_max_g = a_max / g;          % [g]
 
-fprintf('Theoretical max deceleration: %.2f m/s^2 (%.2f g)\n', ...
-    a_max, a_max_g);
+fprintf('Theoretical max deceleration: %.2f m/s^2 (%.2f g)\n', a_max, a_max_g);
