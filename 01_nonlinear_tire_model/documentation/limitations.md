@@ -28,3 +28,12 @@
   curve shape (reference E = 0.97). This model cannot represent
   curve asymmetry that a real tire likely demonstrates.
 - The peak-slip discrepancy (0.2317 against ~0.18 reference).
+
+## Load Sensitivity
+
+- **epsilon = 0.8** is a midpoint value in the 0.7- 0.9 range that is not measured
+  for the vehicle's tires. This range is taken from the book "Race Car Vehicle Dynamics"
+  by William F. Milliken Jr. Real values vary meaningfully by tire construction and compound.
+- Calibrating **k** at the front axle is an arbitrary choice. Calibrating
+  at the rear would produce a different k and slightly different absolute predictions
+  elsewhere, though the qualitative trend, such as diminishing grip per unit load, would be unchanged.
