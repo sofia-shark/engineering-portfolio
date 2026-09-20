@@ -91,3 +91,20 @@ identified in constant friction (that F=mu*N overestimates rear grip relative
 to front grip whenever loads are unequal). The -3.15% difference here
 is modest because static front/rear load imbalance is only ~18% for
 the vehicle.
+
+## Unified Tire Model (Nonlinear Tire Model + Load Sensitivity merge)
+
+**Purpose:** Combine the nonlinear slip-shape with load-dependent peak force 
+into one function usable at any load.
+
+**Method:** D(N) = k * N^epsilon substituted into the Pacejka formula 
+in place of the previous fixed D. B, C, E unchanged and confirmed 
+load-independent by construction.
+
+**Result:** B = 6.0606. k = 5.1550. Regression-verified against the nonlinear 
+tire model's original front-axle result: peak front force = 947.6 N.
+Rear-axle peak = 1077.5 N.
+
+**Key finding:** The tradeoff is the fixed-peak-slip-location limitation. 
+To fix that would require making B or E load-dependent, which would need real 
+test data to calibrate.
