@@ -31,3 +31,11 @@
 - The model does not attempt to represent why load sensitivity occurs
   (contact patch pressure distribution, rubber hysteresis). It is a
   curve-fit representation of the documented effect.
+
+## Unified Tire Model (Nonlinear Tire Model + Load Sensitivity merge)
+
+- B and C are treated as constant with respect to load. This is a
+  direct mathematical consequence of how B was originally derived
+  (B = 1/(C*kappa_sat), independent of D).
+- Because B and E are independent of load in the model, the peak slip ratio
+  (kappa ~ 0.2317) is the same at each load.
