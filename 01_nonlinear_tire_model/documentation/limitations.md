@@ -42,3 +42,10 @@
   A future refinement would replace the nonlinear tire model's fixed D with D(N) from
   this power-law relationship, allowing the full nonlinear curve to respond to changing load
   rather than only being valid at one fixed load.
+
+  ## Unified Tire Model
+
+- Peak slip ratio is fixed at ~0.2317 regardless of load. When real tires
+  typically show the slip ratio at peak force shifting somewhat with load.
+- It is still a longitudinal model, and the model has no lateral force
+  and no combined slip.
