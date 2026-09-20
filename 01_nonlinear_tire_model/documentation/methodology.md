@@ -55,7 +55,7 @@ kappa_sat by construction.
 curve exhibiting rise-peak falloff behaviour.
 
 **Method:** Simplified Magic Formula, where E = 0, D taken directly from
-constant friction and B derived to match linear tire model's initial slope, 
+constant friction and B derived to match the linear tire model's initial slope, 
 given shape factor of C = 1.65. The value is taken from the "Tire and Vehicle Dynamics"
 book by Hans B. Pacejka.
 
@@ -66,10 +66,28 @@ Peak force occurs at kappa ~0.231 for both axles.
 C*atan(B*kappa_M) = pi/2 exactly, so sin = 1 and peak force always equals D 
 regardless of B or C. Peak slip ratio is kappa_M = tan(pi/(2C)) / B. 
 For this model, kappa_M = 0.2317 for both axles, with peak force = D_front = 947.6 N 
-and D_rear = 1112.5 N respectively.
+and D_rear = 1112.5 N, respectively.
 
 **Key finding:** Because B was derived as Cx/(C*D), and Cx itself was
 defined as Fx_max/kappa_sat in linear tire model, the Fx_max terms cancel
 algebraically, so B depends only on C and kappa_sat.
-It means front and rear end up with identical B despite different
+It means the front and rear end up with identical B despite different
 loads.
+
+## Load Sensitivity
+
+**Purpose:** Replace the linear F=mu*N assumption used in constant friction, 
+linear tire model and nonlinear tire model with a sub-linear power-law model 
+reflecting documented tire behaviour.
+
+**Method:** Fx_max = k * N^epsilon, epsilon = 0.8, k calibrated to
+match constant friction exactly at the front axle's static load.
+
+**Result:** k = 3.988. At the rear axle, load sensitivity predicts 
+Fx_max = 1074.5 N vs constant friction's 1112.5 N, so a 3.4% reduction.
+
+**Key finding:** This directly addresses the very first limitation
+identified in constant friction (that F=mu*N overestimates rear grip relative
+to front grip whenever loads are unequal). The 3.4% difference here
+is modest because static front/rear load imbalance is only ~18% for
+the vehicle.
