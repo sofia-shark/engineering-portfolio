@@ -37,3 +37,8 @@
 - Calibrating **k** at the front axle is an arbitrary choice. Calibrating
   at the rear would produce a different k and slightly different absolute predictions
   elsewhere, though the qualitative trend, such as diminishing grip per unit load, would be unchanged.
+- This model has not yet been merged into the nonlinear tire model Pacejka curve.
+  Currently, D is still a single constant per axle in the nonlinear tire model.
+  A future refinement would replace the nonlinear tire model's fixed D with D(N) from
+  this power-law relationship, allowing the full nonlinear curve to respond to changing load
+  rather than only being valid at one fixed load.
