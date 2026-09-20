@@ -83,11 +83,11 @@ reflecting documented tire behaviour.
 **Method:** Fx_max = k * N^epsilon, epsilon = 0.8, k calibrated to
 match constant friction exactly at the front axle's static load.
 
-**Result:** k = 3.988. At the rear axle, load sensitivity predicts 
-Fx_max = 1074.5 N vs constant friction's 1112.5 N, so a 3.4% reduction.
+**Result:** k = 5.154. At the rear axle, load sensitivity predicts 
+Fx_max = 1077.4 N vs constant friction's 1112.5 N, so a -3.15% reduction.
 
 **Key finding:** This directly addresses the very first limitation
 identified in constant friction (that F=mu*N overestimates rear grip relative
-to front grip whenever loads are unequal). The 3.4% difference here
+to front grip whenever loads are unequal). The -3.15% difference here
 is modest because static front/rear load imbalance is only ~18% for
 the vehicle.
