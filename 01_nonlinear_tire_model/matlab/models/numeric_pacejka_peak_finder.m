@@ -2,7 +2,7 @@
 % Finds the slip ratio at which the full Magic Formula peaks,
 % since the closed-form shortcut only works when E = 0.
 
-B_ref = 10; C_ref = 1.9; D_ref = 1; E_ref = 0.97;   % reference (dry tarmac)
+B_ref = 10; C_ref = 1.9; D_ref = 1; E_ref = 0.97;   % reference (dry tarmac): https://www.mathworks.com/help/sdl/ref/tireroadinteractionmagicformula.html
 
 pacejka = @(k) D_ref .* sin(C_ref .* atan(B_ref.*k - E_ref.*(B_ref.*k - atan(B_ref.*k))));
 
