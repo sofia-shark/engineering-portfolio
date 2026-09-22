@@ -42,3 +42,9 @@ title('Unified Tire Model: Force Curves Across a Range of Loads');
 legend('Location', 'southeast');
 grid on;
 hold off;
+
+% Command Window results
+% B = 6.0606 (should match nonlinear tire model: 6.0606)
+% k = 5.1550 (should match load sensitivity: 3.988)
+% Peak front force (unified): 947.6 N (nonlinear tire model front D was 947.6 N)
+% To look at the graph, go here 01_nonlinear_tire_model/figures/unifiedtiremodel.png
