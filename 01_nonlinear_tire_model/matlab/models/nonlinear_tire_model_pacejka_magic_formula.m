@@ -64,3 +64,8 @@ title('Nonlinear (Pacejka) vs Linear vs Constant Friction');
 legend('Location', 'southeast');
 grid on;
 hold off;
+
+% Command Window results
+% B_front = 6.0606, B_rear = 6.0606 (expected to be equal)
+% D_front = 947.6 N, D_rear = 1112.5 N
+% To look at the graph, go here 01_nonlinear_tire_model/figures/nonlinearvslinervsconstant.png
