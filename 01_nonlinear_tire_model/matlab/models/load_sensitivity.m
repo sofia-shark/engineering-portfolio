@@ -39,7 +39,7 @@ fprintf('Constant friction (linear):    %.1f N\n', Fx_rear_max_Cf);
 fprintf('Load sensitivity (power-law): %.1f N\n', Fx_rear_max_Ls);
 
 pct_diff_rear = (Fx_rear_max_Ls - Fx_rear_max_Cf) / Fx_rear_max_Cf * 100;
-fprintf('\nRear axle difference (Load Sensitivity vs Cinstant Friction): %.2f %%\n', pct_diff_rear);
+fprintf('\nRear axle difference (Load Sensitivity vs Constant Friction): %.2f %%\n', pct_diff_rear);
 
 %% Plot: force vs load, linear vs power-law, across a load sweep
 N_sweep = linspace(200, 1200, 200);   % [N], covers below/above both corners
@@ -60,3 +60,14 @@ title('Load Sensitivity: Linear vs Power-Law Model');
 legend('Location', 'northwest');
 grid on;
 hold off;
+
+% Command Window results:
+% Calibration constant k = 5.1550
+% --- Front axle ---
+% Constant friction (linear):    947.6 N
+% Load sensitivity (power-law): 947.6 N (should match, by calibration)
+% --- Rear axle ---
+% Constant friction (linear):    1112.5 N
+% Load sensitivity (power-law): 1077.3 N
+% Rear axle difference (Load Sensitivity vs Constant Friction): -3.16 %
+% To look at the graph, go here 01_nonlinear_tire_model/figures/loadsensitivity.png
