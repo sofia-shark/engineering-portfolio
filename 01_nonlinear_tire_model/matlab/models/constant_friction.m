@@ -33,7 +33,7 @@ a_max_g = a_max / g;          % [g]
 
 fprintf('Theoretical max deceleration: %.2f m/s^2 (%.2f g)\n', a_max, a_max_g);
 
-%% Command window results:
+% Command window results:
 % Total weight: 2943.00 N
 % Front tire static load: 676.9 N
 % Rear tire static load:  794.6 N
