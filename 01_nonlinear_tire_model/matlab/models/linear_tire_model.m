@@ -47,3 +47,8 @@ title('Linear Tire Model vs Constant Friction');
 legend('Location', 'southeast');
 grid on;
 hold off;
+
+% Command Window results:
+% Derived front slip stiffness Cx_front: 9476.5 N
+% Derived rear slip stiffness Cx_rear: 11124.5 N
+% To look at the graph, go here 01_nonlinear_tire_model/figures/lineartiremodelvsconstantfriction.png
