@@ -33,4 +33,10 @@ a_max_g = a_max / g;          % [g]
 
 fprintf('Theoretical max deceleration: %.2f m/s^2 (%.2f g)\n', a_max, a_max_g);
 
-% to look at the graph, go to 01_nonlinear_tire_model/figures/lineartiremodelvsconstantfriction.png
+%% Command window results:
+% Total weight: 2943.00 N
+% Front tire static load: 676.9 N
+% Rear tire static load:  794.6 N
+% Max force per front tire: 947.6 N
+% Max force per rear tire:  1112.5 N
+% Theoretical max deceleration: 13.73 m/s^2 (1.40 g)
