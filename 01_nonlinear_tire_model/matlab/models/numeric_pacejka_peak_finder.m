@@ -13,3 +13,6 @@ Fx_sweep = pacejka(k_sweep);
 kappa_peak = k_sweep(idx);
 
 fprintf('Reference curve peaks at kappa = %.4f, Fx = %.4f\n', kappa_peak, Fx_peak);
+
+% Command Window results:
+% Reference curve peaks at kappa = 0.1802, Fx = 1.0000
