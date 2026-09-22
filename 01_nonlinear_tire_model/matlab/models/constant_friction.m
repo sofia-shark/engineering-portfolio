@@ -32,3 +32,5 @@ a_max   = Fx_total_max / m;   % [m/s^2]
 a_max_g = a_max / g;          % [g]
 
 fprintf('Theoretical max deceleration: %.2f m/s^2 (%.2f g)\n', a_max, a_max_g);
+
+% to look at the graph, go to 01_nonlinear_tire_model/figures/lineartiremodelvsconstantfriction.png
